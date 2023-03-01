@@ -1,0 +1,110 @@
+<!--pagina para registrarse-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+</head>
+<br>
+<!--todo lo que este dentro de esta etiqueta estara centrado-->
+<center>
+
+  <!--cuerpo de nuestro archivo-->
+
+  <body>
+
+    <!--diseño de bootstrap-->
+    <div class="col-md-4 ">
+      <div class="bg-white p-5 rounded-5">
+
+        <!--etiqueta de formulario-->
+        <form action="" method="post" class="mt-4">
+
+          <!--estilo para el email-->
+          <div class="form-floating mb-3  ">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="email" name="email" placeholder="Email" class="form-control" id="floatingInput" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Email</label>
+          </div>
+
+          <!--estilo para la contraseña-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="password" name="password" placeholder="password" class="form-control" id="floatingInput"
+              required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Contraseña</label>
+          </div>
+
+          <!--estilo para el nombre-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="nombre" placeholder="nombre" class="form-control" id="floatingInput" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Nombre</label>
+          </div>
+
+          <!--estilo para el apellido paterno-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="apPaterno" placeholder="apellido paterno" class="form-control" id="floatingInput"
+              required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Apellido Paterno</label>
+          </div>
+
+          <!--estilo para el apellido materno-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="apMaterno" placeholder="apellido materno" class="form-control" id="floatingInput"
+              required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Apellido Materno</label>
+          </div>
+
+          <!--estilo para la fecha de nacimiento-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="date" name="fechaNacimiento" placeholder="fecha de naciemiento" class="form-control"
+              id="floatingInput" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Fecha de Nacimiento</label>
+          </div>
+
+          <!--estilo para el telefono-->
+          <div class="form-floating mb-3">
+            <!--indicamos que sera para la caja de texto-->
+            <input type="tel" name="telefono" placeholder="pon tu telefono" class="form-control" id="floatingInput"
+              required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Numero de Telefono</label>
+          </div>
+
+          <!--estilo para el rol-->
+          <div class="form-floating mb-3">
+            <input type="rol" name="rol" placeholder="cual es tu rol" class="form-control" id="floatingInput" required>
+            <label for="floatingInput">Rol</label>
+          </div>
+
+          <!--boton para registrarse-->
+          <button type="submit" class="btn btn-primary btn-lg">Registrarme</button>
+
+          <!--un mensaje que en caso de ya tener un usuario-->
+          {{#if error}}
+          <p class="text-red-500 font-bold text-lg my-3 ">{{error}}</p>
+          {{/if}}
+
+          <!--se cierra todo-->
+        </form>
+
+      </div>
+    </div>
+
+  </body>
+</center>
+
+</html>
