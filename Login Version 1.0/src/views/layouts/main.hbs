@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet">
+</head>
+
+
+<body>
+  <nav>
+    <!--todo el contenido que va dentro de la barra de navegacion-->
+    <div>
+      <!--titulo que va dentro del navbar-->
+      <h1 >Mi Aplicación!  </h1>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul>
+          <!--nombre con el que te registrarte -->
+          {{#if name}}
+
+
+
+          <!--nombre-->
+          <p class="h2" style="color: white;"> Hola:  {{name}}</p>
+
+          <li class="nav-item px-4">
+            <!--boton para cerrar sesion con estilo-->
+            <button type="button" class="btn  btn-lg" style="background-color: rgb(255, 255, 255);">
+              <!--link que se ejecuta cuando le des click al boton -->
+              <a href="/logout" class="nav-link active">Logout</a>
+            </button>
+          </li>
+
+
+          {{else}}
+
+
+
+          <!--estilo para inicio de sesión-->
+          <li>
+            <!--estilo para el boton de iniciar sesion-->
+            <button type="button" >
+              <!--link que se ejecuta cuando le des click al boton -->
+              <a href="/login" >Inicio de sesion</a>
+            </button>
+          </li>
+          <li>
+            <button type="button">
+              <!--link que se ejecuta cuando le des click al boton -->
+              <a href="/register">Registrarse</a>
+            </button>
+
+          </li>
+          <!--estilo para ir a la pagina prinicipal-->
+          <li>
+            <!--boton de home con estiilo-->
+            <button type="button" >
+              <!--al darle click te enviaria a una pagina pero ahorita no hay una pagina por eso de deja en blanco-->
+              <a href="/" >Home</a>
+            </button>
+
+            <!--se cierra todo-->
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{{body}}}
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!--pagina para registrarse-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+</head>
+<br>
+<!--todo lo que este dentro de esta etiqueta estara centrado-->
+<center>
+
+  <!--cuerpo de nuestro archivo-->
+
+  <body>
+
+    <div>
+      <div>
+
+        <!--etiqueta de formulario-->
+        <form action="" method="post">
+
+
+          <div>
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="nombre" placeholder="nombre" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Nombre</label>
+          </div>
+
+          <div>
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="apPaterno" placeholder="apellido paterno" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Apellido Paterno</label>
+          </div>
+
+          <div >
+            <!--indicamos que sera para la caja de texto-->
+            <input type="text" name="apMaterno" placeholder="apellido materno" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Apellido Materno</label>
+          </div>
+
+          <div>
+            <!--indicamos que sera para la caja de texto-->
+            <input type="date" name="fechaNacimiento" placeholder="fecha de naciemiento"  required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Fecha de Nacimiento</label>
+          </div>
+
+          <div>
+            <!--indicamos que sera para la caja de texto-->
+            <input type="tel" name="telefono" placeholder="pon tu telefono" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Numero de Telefono</label>
+          </div>
+
+
+          <div>
+            <!--indicamos que sera para la caja de texto-->
+            <input type="email" name="email" placeholder="Email" >
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Email</label>
+          </div>
+
+
+          <div >
+            <!--indicamos que sera para la caja de texto-->
+            <input type="password" name="password" placeholder="password" required>
+            <!--escribimos que debe de poner en ese campo el usuario -->
+            <label for="floatingInput">Contraseña</label>
+          </div>
+          <!--Rol-->
+
+          <div>
+            <!--le ponemos una clase de bootstrap a nuestro select-->
+            <select type="rol" name="rol" >
+              <!--opciones-->
+              <option hidden selected> Administrador Personal Estudiante</option>
+              <option value="A">A</option>
+              <option value="P">P</option>
+              <option value="E">E</option>
+            </select>
+          </div>
+
+          <!--boton para registrarse-->
+          <button type="submit">Registrarme</button>
+
+          <!--un mensaje que en caso de ya tener un usuario-->
+          {{#if error}}
+          <p >{{error}}</p>
+          {{/if}}
+
+          <!--se cierra todo-->
+        </form>
+
+      </div>
+    </div>
+
+  </body>
+</center>
+
+</html>

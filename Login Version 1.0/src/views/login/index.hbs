@@ -1,0 +1,64 @@
+<!--pagina de inicio de sesion -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+</head>
+
+<br>
+<!--indicamos que todo este centrado-->
+<center>
+
+    <!--cuerpo del archivo-->
+
+    <body>
+
+        <!--le ponemos estilo de bootstrap-->
+        <div>
+            <div>
+                <form action="" method="post" >
+
+                    <!--estilo para el email-->
+                    <div >
+                        <!--indicamos que sera para la caja de texto-->
+                        <input type="email" name="email" placeholder="Email" required>
+                        <!--escribimos que debe de poner en ese campo el usuario -->
+                        <label for="floatingInput">Email</label>
+                    </div>
+
+
+                    <br>
+                    <!--estilo para la contraseña-->
+                    <div >
+                        <!--indicamos que elementos tendra la caja de texto-->
+                        <input type="password" name="password" placeholder="password" required>
+                        <!--escribimos que debe de poner en ese campo el usuario -->
+                        <label for="floatingInput">Contraseña</label><br>
+                    </div>
+
+                    <br>
+                    <!--boton para iniciar sesion-->
+                    <button type="submit" >Iniciar Sesión</button>
+
+                    <br>
+
+
+                    <!--un mensaje que en caso de que no tenga un usuario-->
+                    {{#if error}}
+                    <p>{{error}}</p>
+                    {{/if}}
+
+                    <!--se cierra todo-->
+                </form>
+
+
+            </div>
+        </div>
+    </body>
+</center>
+
+</html>
